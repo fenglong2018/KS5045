@@ -668,9 +668,10 @@ namespace KS5045上位机
                     tmp_data += Can_Rev_Buf[4];
                     this.BAT_MAX_CHARGING_VOLTAGE.Invoke(new EventHandler(delegate
                     {
-                        //data_tmp = tmp_data;
-                        //data_tmp = data_tmp * (float)0.1;//精度0.5
-                        BAT_MAX_CHARGING_VOLTAGE.Text = tmp_data.ToString();
+                        data_tmp = tmp_data;
+                        data_tmp = data_tmp * (float)1;//精度0.5
+                        data_tmp /= 100;
+                        BAT_MAX_CHARGING_VOLTAGE.Text = data_tmp.ToString("F2");
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());
@@ -684,9 +685,10 @@ namespace KS5045上位机
                     tmp_data += Can_Rev_Buf[4];
                     this.BAT_MIN_DISCHARGING_VOLTAGE.Invoke(new EventHandler(delegate
                     {
-                        //data_tmp = tmp_data;
-                        //data_tmp = data_tmp * (float)0.1;//精度0.5
-                        BAT_MIN_DISCHARGING_VOLTAGE.Text = tmp_data.ToString();
+                        data_tmp = tmp_data;
+                        data_tmp = data_tmp * (float)1;//精度0.5
+                        data_tmp /= 100;
+                        BAT_MIN_DISCHARGING_VOLTAGE.Text = data_tmp.ToString("F2");
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());
@@ -703,7 +705,8 @@ namespace KS5045上位机
                         data_tmp = tmp_data;
                         data_tmp = data_tmp * (float)1;//精度0.5
                         data_tmp -= 4000;
-                        BAT_MAX_CHARGING_CURRENT.Text = data_tmp.ToString("F0");
+                        data_tmp /= 10;
+                        BAT_MAX_CHARGING_CURRENT.Text = data_tmp.ToString("F1");
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());
@@ -717,9 +720,10 @@ namespace KS5045上位机
                     tmp_data += Can_Rev_Buf[4];
                     this.BAT_RATED_CAPACITY.Invoke(new EventHandler(delegate
                     {
-                        //data_tmp = tmp_data;
-                        //data_tmp = data_tmp * (float)0.1;//精度0.5
-                        BAT_RATED_CAPACITY.Text = tmp_data.ToString();
+                        data_tmp = tmp_data;
+                        data_tmp = data_tmp * (float)1;//精度0.5
+                        data_tmp /= 10;
+                        BAT_RATED_CAPACITY.Text = data_tmp.ToString("F1");
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());
@@ -895,6 +899,7 @@ namespace KS5045上位机
                     {
                         data_tmp = tmp_data;
                         data_tmp = data_tmp * (float)1;//精度0.5
+                        data_tmp /= 10;
                         BAT_Capacity.Text = data_tmp.ToString("F1");
                     }));
 
@@ -910,8 +915,8 @@ namespace KS5045上位机
                     this.voltage.Invoke(new EventHandler(delegate
                     {
                         data_tmp = tmp_data;
-                        data_tmp = data_tmp * (float)1/1000;//精度0.5
-                        voltage.Text = data_tmp.ToString("F3");
+                        data_tmp = data_tmp * (float)1/100;//精度0.5
+                        voltage.Text = data_tmp.ToString("F2");
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());

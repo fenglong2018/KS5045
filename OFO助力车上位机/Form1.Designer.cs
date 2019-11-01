@@ -717,7 +717,7 @@
             this.BAT_BMS_APP_SW_VER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_BMS_APP_SW_VER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_BMS_APP_SW_VER.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_BMS_APP_SW_VER.Location = new System.Drawing.Point(150, 56);
+            this.BAT_BMS_APP_SW_VER.Location = new System.Drawing.Point(155, 56);
             this.BAT_BMS_APP_SW_VER.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_BMS_APP_SW_VER.Name = "BAT_BMS_APP_SW_VER";
             this.BAT_BMS_APP_SW_VER.Size = new System.Drawing.Size(72, 21);
@@ -754,19 +754,19 @@
             this.label102.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label102.AutoSize = true;
             this.label102.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label102.Location = new System.Drawing.Point(281, 84);
+            this.label102.Location = new System.Drawing.Point(282, 84);
             this.label102.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(89, 17);
+            this.label102.Size = new System.Drawing.Size(79, 17);
             this.label102.TabIndex = 145;
-            this.label102.Text = "额定容量(0.1A)";
+            this.label102.Text = "额定容量(0A)";
             // 
             // BAT_BMS_UN_SW_VER
             // 
             this.BAT_BMS_UN_SW_VER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_BMS_UN_SW_VER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_BMS_UN_SW_VER.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_BMS_UN_SW_VER.Location = new System.Drawing.Point(150, 82);
+            this.BAT_BMS_UN_SW_VER.Location = new System.Drawing.Point(155, 82);
             this.BAT_BMS_UN_SW_VER.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_BMS_UN_SW_VER.Name = "BAT_BMS_UN_SW_VER";
             this.BAT_BMS_UN_SW_VER.Size = new System.Drawing.Size(72, 21);
@@ -779,7 +779,7 @@
             this.BAT_BMS_CP_VER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_BMS_CP_VER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_BMS_CP_VER.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_BMS_CP_VER.Location = new System.Drawing.Point(150, 108);
+            this.BAT_BMS_CP_VER.Location = new System.Drawing.Point(155, 108);
             this.BAT_BMS_CP_VER.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_BMS_CP_VER.Name = "BAT_BMS_CP_VER";
             this.BAT_BMS_CP_VER.Size = new System.Drawing.Size(72, 21);
@@ -804,7 +804,7 @@
             this.label108.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label108.AutoSize = true;
             this.label108.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label108.Location = new System.Drawing.Point(285, 110);
+            this.label108.Location = new System.Drawing.Point(282, 110);
             this.label108.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(80, 17);
@@ -828,7 +828,7 @@
             this.BAT_BMS_HW_VER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_BMS_HW_VER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_BMS_HW_VER.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_BMS_HW_VER.Location = new System.Drawing.Point(150, 30);
+            this.BAT_BMS_HW_VER.Location = new System.Drawing.Point(155, 30);
             this.BAT_BMS_HW_VER.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_BMS_HW_VER.Name = "BAT_BMS_HW_VER";
             this.BAT_BMS_HW_VER.Size = new System.Drawing.Size(72, 21);
@@ -841,7 +841,7 @@
             this.BAT_MAX_CHARGING_VOLTAGE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_MAX_CHARGING_VOLTAGE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_MAX_CHARGING_VOLTAGE.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_MAX_CHARGING_VOLTAGE.Location = new System.Drawing.Point(429, 4);
+            this.BAT_MAX_CHARGING_VOLTAGE.Location = new System.Drawing.Point(417, 4);
             this.BAT_MAX_CHARGING_VOLTAGE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_MAX_CHARGING_VOLTAGE.Name = "BAT_MAX_CHARGING_VOLTAGE";
             this.BAT_MAX_CHARGING_VOLTAGE.Size = new System.Drawing.Size(70, 21);
@@ -854,12 +854,12 @@
             this.label114.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label114.AutoSize = true;
             this.label114.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label114.Location = new System.Drawing.Point(252, 32);
+            this.label114.Location = new System.Drawing.Point(261, 32);
             this.label114.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(147, 17);
+            this.label114.Size = new System.Drawing.Size(122, 17);
             this.label114.TabIndex = 135;
-            this.label114.Text = "SOC10%对应电压(10mV)";
+            this.label114.Text = "SOC10%对应电压(V)";
             this.label114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label115
@@ -867,19 +867,19 @@
             this.label115.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label115.AutoSize = true;
             this.label115.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label115.Location = new System.Drawing.Point(247, 6);
+            this.label115.Location = new System.Drawing.Point(256, 6);
             this.label115.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(157, 17);
+            this.label115.Size = new System.Drawing.Size(132, 17);
             this.label115.TabIndex = 134;
-            this.label115.Text = "电池包充电限制电压(10mV)";
+            this.label115.Text = "电池包充电限制电压(V)";
             // 
             // BAT_MIN_DISCHARGING_VOLTAGE
             // 
             this.BAT_MIN_DISCHARGING_VOLTAGE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_MIN_DISCHARGING_VOLTAGE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_MIN_DISCHARGING_VOLTAGE.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_MIN_DISCHARGING_VOLTAGE.Location = new System.Drawing.Point(428, 30);
+            this.BAT_MIN_DISCHARGING_VOLTAGE.Location = new System.Drawing.Point(416, 30);
             this.BAT_MIN_DISCHARGING_VOLTAGE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_MIN_DISCHARGING_VOLTAGE.Name = "BAT_MIN_DISCHARGING_VOLTAGE";
             this.BAT_MIN_DISCHARGING_VOLTAGE.Size = new System.Drawing.Size(71, 21);
@@ -892,19 +892,19 @@
             this.label118.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label118.AutoSize = true;
             this.label118.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label118.Location = new System.Drawing.Point(257, 58);
+            this.label118.Location = new System.Drawing.Point(262, 58);
             this.label118.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(137, 17);
+            this.label118.Size = new System.Drawing.Size(120, 17);
             this.label118.TabIndex = 137;
-            this.label118.Text = "加热充电限制电流(0.1A)";
+            this.label118.Text = "加热充电限制电流(A)";
             // 
             // BAT_MAX_TEMP
             // 
             this.BAT_MAX_TEMP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_MAX_TEMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_MAX_TEMP.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_MAX_TEMP.Location = new System.Drawing.Point(428, 108);
+            this.BAT_MAX_TEMP.Location = new System.Drawing.Point(416, 108);
             this.BAT_MAX_TEMP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_MAX_TEMP.Name = "BAT_MAX_TEMP";
             this.BAT_MAX_TEMP.Size = new System.Drawing.Size(71, 21);
@@ -917,7 +917,7 @@
             this.BAT_RATED_CAPACITY.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_RATED_CAPACITY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_RATED_CAPACITY.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_RATED_CAPACITY.Location = new System.Drawing.Point(428, 82);
+            this.BAT_RATED_CAPACITY.Location = new System.Drawing.Point(416, 82);
             this.BAT_RATED_CAPACITY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_RATED_CAPACITY.Name = "BAT_RATED_CAPACITY";
             this.BAT_RATED_CAPACITY.Size = new System.Drawing.Size(71, 21);
@@ -930,7 +930,7 @@
             this.BAT_MAX_CHARGING_CURRENT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_MAX_CHARGING_CURRENT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_MAX_CHARGING_CURRENT.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_MAX_CHARGING_CURRENT.Location = new System.Drawing.Point(428, 56);
+            this.BAT_MAX_CHARGING_CURRENT.Location = new System.Drawing.Point(416, 56);
             this.BAT_MAX_CHARGING_CURRENT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_MAX_CHARGING_CURRENT.Name = "BAT_MAX_CHARGING_CURRENT";
             this.BAT_MAX_CHARGING_CURRENT.Size = new System.Drawing.Size(71, 21);
@@ -943,7 +943,7 @@
             this.BAT_SUPPLIER.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_SUPPLIER.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_SUPPLIER.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_SUPPLIER.Location = new System.Drawing.Point(150, 4);
+            this.BAT_SUPPLIER.Location = new System.Drawing.Point(155, 4);
             this.BAT_SUPPLIER.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_SUPPLIER.Name = "BAT_SUPPLIER";
             this.BAT_SUPPLIER.Size = new System.Drawing.Size(72, 21);
@@ -956,7 +956,7 @@
             this.label123.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label123.AutoSize = true;
             this.label123.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label123.Location = new System.Drawing.Point(536, 6);
+            this.label123.Location = new System.Drawing.Point(528, 6);
             this.label123.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(92, 17);
@@ -968,7 +968,7 @@
             this.label124.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label124.AutoSize = true;
             this.label124.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label124.Location = new System.Drawing.Point(560, 32);
+            this.label124.Location = new System.Drawing.Point(552, 32);
             this.label124.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(44, 17);
@@ -980,7 +980,7 @@
             this.label125.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label125.AutoSize = true;
             this.label125.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label125.Location = new System.Drawing.Point(524, 58);
+            this.label125.Location = new System.Drawing.Point(516, 58);
             this.label125.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(116, 17);
@@ -992,7 +992,7 @@
             this.label126.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label126.AutoSize = true;
             this.label126.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label126.Location = new System.Drawing.Point(548, 84);
+            this.label126.Location = new System.Drawing.Point(540, 84);
             this.label126.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(68, 17);
@@ -1004,7 +1004,7 @@
             this.BAT_RATED_CYCLE_INDEX.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_RATED_CYCLE_INDEX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_RATED_CYCLE_INDEX.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_RATED_CYCLE_INDEX.Location = new System.Drawing.Point(666, 4);
+            this.BAT_RATED_CYCLE_INDEX.Location = new System.Drawing.Point(662, 4);
             this.BAT_RATED_CYCLE_INDEX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_RATED_CYCLE_INDEX.Name = "BAT_RATED_CYCLE_INDEX";
             this.BAT_RATED_CYCLE_INDEX.Size = new System.Drawing.Size(74, 21);
@@ -1017,7 +1017,7 @@
             this.BAT_CELLS_NUM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_CELLS_NUM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_CELLS_NUM.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_CELLS_NUM.Location = new System.Drawing.Point(666, 30);
+            this.BAT_CELLS_NUM.Location = new System.Drawing.Point(662, 30);
             this.BAT_CELLS_NUM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_CELLS_NUM.Name = "BAT_CELLS_NUM";
             this.BAT_CELLS_NUM.Size = new System.Drawing.Size(74, 21);
@@ -1030,7 +1030,7 @@
             this.BAT_TEMP_SENSOR_NUM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_TEMP_SENSOR_NUM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_TEMP_SENSOR_NUM.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_TEMP_SENSOR_NUM.Location = new System.Drawing.Point(666, 56);
+            this.BAT_TEMP_SENSOR_NUM.Location = new System.Drawing.Point(662, 56);
             this.BAT_TEMP_SENSOR_NUM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_TEMP_SENSOR_NUM.Name = "BAT_TEMP_SENSOR_NUM";
             this.BAT_TEMP_SENSOR_NUM.Size = new System.Drawing.Size(74, 21);
@@ -1043,7 +1043,7 @@
             this.BAT_TYPE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_TYPE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_TYPE.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_TYPE.Location = new System.Drawing.Point(666, 82);
+            this.BAT_TYPE.Location = new System.Drawing.Point(662, 82);
             this.BAT_TYPE.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_TYPE.Name = "BAT_TYPE";
             this.BAT_TYPE.Size = new System.Drawing.Size(74, 21);
@@ -1056,7 +1056,7 @@
             this.label132.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label132.AutoSize = true;
             this.label132.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label132.Location = new System.Drawing.Point(285, 134);
+            this.label132.Location = new System.Drawing.Point(282, 134);
             this.label132.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label132.Name = "label132";
             this.label132.Size = new System.Drawing.Size(80, 17);
@@ -1068,7 +1068,7 @@
             this.BAT_MIN_TEMP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BAT_MIN_TEMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAT_MIN_TEMP.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BAT_MIN_TEMP.Location = new System.Drawing.Point(428, 133);
+            this.BAT_MIN_TEMP.Location = new System.Drawing.Point(416, 133);
             this.BAT_MIN_TEMP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BAT_MIN_TEMP.Name = "BAT_MIN_TEMP";
             this.BAT_MIN_TEMP.Size = new System.Drawing.Size(71, 20);
@@ -2528,24 +2528,24 @@
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.Location = new System.Drawing.Point(565, 55);
+            this.label30.Location = new System.Drawing.Point(557, 58);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(68, 23);
+            this.label30.Size = new System.Drawing.Size(84, 17);
             this.label30.TabIndex = 134;
-            this.label30.Text = "电池总电压(10mV)";
+            this.label30.Text = "电池总电压(V)";
             // 
             // label40
             // 
             this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label40.Location = new System.Drawing.Point(565, 81);
+            this.label40.Location = new System.Drawing.Point(553, 84);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(68, 23);
+            this.label40.Size = new System.Drawing.Size(93, 17);
             this.label40.TabIndex = 181;
-            this.label40.Text = "电池包容量(0.1AH)";
+            this.label40.Text = "电池包容量(AH)";
             // 
             // BAT_Capacity
             // 
