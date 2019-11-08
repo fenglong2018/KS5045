@@ -41,8 +41,8 @@ namespace KS5045上位机
         public void init(UInt32 chanl, UInt32 baute)
         {
             m_devtype = (UInt32)4;//类型
-            m_devind = (UInt32)0;//索引号
-            m_canind = (UInt32)chanl;//通道0
+            //m_devind = (UInt32)0;//索引号
+            //m_canind = (UInt32)chanl;//通道0
             m_timing = (UInt32)baute;//250k 波特率
         }
         public void start()
@@ -87,12 +87,38 @@ namespace KS5045上位机
 
         public bool Open()
         {
-            if (VCI_OpenDevice(m_devtype, m_devind, m_canind) == 0)//0：表示操作失败
+            uint result = 0;
+
+            for (uint i = 0; i < 6; i++)
+            {
+                for (uint j = 0; j < 2; j++)
+                {
+                    if (VCI_OpenDevice(m_devtype, i, j) == 0)//0：表示操作失败
+                    {
+                        result = 0;
+                    }
+                    else
+                    {
+                        result = 1;
+                        m_devind = i;
+                        m_canind = j;
+                        j = 2;
+                    }
+                }
+                if (result == 1)
+                {
+                    i = 6;
+                }
+            }
+            //           if (VCI_OpenDevice(m_devtype, m_devind+1, m_canind) == 0)//0：表示操作失败
+            if (result == 0)
             {
                 return false;
             }
-            return true;
-
+            else
+            {
+                return true;
+            }
         }
 
         public void Close()
