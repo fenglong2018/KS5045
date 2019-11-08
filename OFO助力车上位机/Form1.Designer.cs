@@ -46,7 +46,6 @@
             this.tsslDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.nulllabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.sComm2 = new System.IO.Ports.SerialPort(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
@@ -355,6 +354,7 @@
             this.label197 = new System.Windows.Forms.Label();
             this.label196 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.timer5 = new System.Windows.Forms.Timer(this.components);
             this.msMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -492,10 +492,6 @@
             // sComm2
             // 
             this.sComm2.ParityReplace = ((byte)(0));
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer1
             // 
@@ -4403,6 +4399,11 @@
             this.timer4.Interval = 2000;
             this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
             // 
+            // timer5
+            // 
+            this.timer5.Interval = 100;
+            this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -4461,7 +4462,6 @@
         private System.Windows.Forms.ToolStripStatusLabel nulllabel;
         private System.IO.Ports.SerialPort sComm2;
         private System.Windows.Forms.ToolStripComboBox combps;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
@@ -4771,6 +4771,8 @@
         private System.Windows.Forms.Label SoftOt_CHG;
         private System.Windows.Forms.Label SoftUt_CHG;
         private System.Windows.Forms.Label BqOt_MOS;
+  
+        private System.Windows.Forms.Timer timer5;
     }
 }
 

@@ -86,7 +86,7 @@ namespace KS5045上位机
         int type = 0;
         byte []data_state = new byte[8];
 
-
+        bool com_failed = false;
 
 
 
@@ -128,7 +128,8 @@ namespace KS5045上位机
 
         private void Form1_Load(object sender, EventArgs e)
         {
- //           timer1.Enabled = true;
+
+            //           timer1.Enabled = true;
             send_buffer[1] = 0x00;
             SysStatu.Text = "System state：               ";
             CommStatus.Text = "Serial port close                 ";
@@ -289,6 +290,8 @@ namespace KS5045上位机
 
         private void OpenPortTool_Click(object sender, EventArgs e)
         {
+            timer5.Interval = 1000;
+            timer5.Enabled = true;
             try
             {
                 //loadercan.init((UInt32)cmPort.SelectedIndex, 8);
@@ -369,8 +372,6 @@ namespace KS5045上位机
 
             byte [] RecCrcData= new byte[2];
 
-            //           timer2.Enabled = true;
-            //           timer3.Enabled = true;
             try
             {
                 while (CanRunning)
@@ -383,7 +384,7 @@ namespace KS5045上位机
                     if ((res > 0) && (res < 4294967295))
                         //if (res >= 800) 
                     {
-                        overtime = 0;                       
+                                               
                         res = loadercan.Receive(ref ReceiveBuffer[0]);
 
                         //UInt32 u32_id = 0;
@@ -412,12 +413,14 @@ namespace KS5045上位机
                                     RecCrcData = CRC(Can_Rev_Buf, 6);
                                     if ( (RecCrcData[0]== Can_Rev_Buf[6]) && (RecCrcData[1] == Can_Rev_Buf[7]) )     //判断校验是否正确
                                     {
+                                        overtime = 0;
                                         cmd = ReceiveBuffer[i].Data[3];//(byte)(u32_id);
                                         data_processing(cmd);//处理返回的指令
                                     }
                                 }
                                 else if((Can_Rev_Buf[0] == 0x00) && (Can_Rev_Buf[1] == 0x04))
                                 {
+                                    overtime = 0;
                                     cmd = Can_Rev_Buf[2];
                                     data_processing2(cmd);//处理返回的指令
                                 }
@@ -1528,6 +1531,8 @@ namespace KS5045上位机
         /// 
         unsafe private void can_send()
         {
+
+
             try
             {
 
@@ -1580,7 +1585,12 @@ namespace KS5045上位机
                             tx_buffer[6] = SendCrcData[0];
                             tx_buffer[7] = SendCrcData[1];
                             loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                            this.timer2.Enabled = true;
+
+                            //if (timer5.Enabled == false)
+                            //{
+                            //    timer5.Enabled = true;                                
+                            //}
+
                             Thread.Sleep(Consts.TX_DELAY);
                         }
 
@@ -1591,10 +1601,11 @@ namespace KS5045上位机
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                        this.timer2.Enabled = true;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
-
-
 
                         //0x9F~0xA3     通信格式另立，，20191024 fenglong
 
@@ -1617,7 +1628,10 @@ namespace KS5045上位机
                             //tx_buffer[6] = SendCrcData[0];
                             //tx_buffer[7] = SendCrcData[1];
                             loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                            this.timer2.Enabled = true;
+                            //if (timer5.Enabled == false)
+                            //{
+                            //    timer5.Enabled = true;
+                            //}
                             Thread.Sleep(Consts.TX_DELAY);
                         }
 
@@ -1649,7 +1663,10 @@ namespace KS5045上位机
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                        this.timer2.Enabled = true;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1662,7 +1679,10 @@ namespace KS5045上位机
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                        this.timer2.Enabled = true;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1674,7 +1694,10 @@ namespace KS5045上位机
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                        this.timer2.Enabled = true;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1686,7 +1709,10 @@ namespace KS5045上位机
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
-                        this.timer2.Enabled = true;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1706,6 +1732,10 @@ namespace KS5045上位机
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
                         button1.ForeColor = Color.Black;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1726,6 +1756,10 @@ namespace KS5045上位机
                         tx_buffer[7] = SendCrcData[1];
                         loadercan.StandardWrite(tx_buffer, cmd, len, type);
                         button2.ForeColor = Color.Black;
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
 
@@ -1764,7 +1798,7 @@ namespace KS5045上位机
         private void ClosePortTool_Click(object sender, EventArgs e)
         {
             //timer1.Enabled = false;
-            timer2.Enabled = false;
+            timer5.Enabled = false;
             overtime = 0;
             CanRunning = false;
             CommStatus.Text = "串口未打开";    // 清空状态栏
@@ -1775,24 +1809,7 @@ namespace KS5045上位机
 
 
 
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            overtime++;//接收超时计数
-
-            if (CanSending==false)
-            {
-                timer2.Enabled = false;
-                overtime = 0;
-            }
-
-            if (overtime > 5)//超时
-            {
-                overtime = 0;
-                //MessageBox.Show("通信超时！");
-                CommStatus.Text = "通信超时！";
-
-            }
-        }
+  
 
      
 
@@ -2235,6 +2252,30 @@ namespace KS5045上位机
         }
 
 
+
+        private void Timer5_Tick(object sender, EventArgs e)
+        {
+            overtime++;//接收超时计数
+ //           timer5.Interval = 100;
+            if (CanSending == false)
+            {
+                timer5.Enabled = false;
+                overtime = 0;
+            }
+
+            if (overtime > 3)//超时
+            {
+ //               overtime = 0;
+                CommStatus.Text = "通信超时！";
+                CommStatus.ForeColor = Color.Red;
+            }
+            else
+            {
+                CommStatus.Text = " CAN2.0：BPS：250Kbps";
+                CommStatus.ForeColor = Color.Blue;
+            }
+
+        }
 
         /// <summary>
         /// CRC数据验证
