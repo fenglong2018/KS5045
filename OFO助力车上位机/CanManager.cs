@@ -51,17 +51,17 @@ namespace KS5045上位机
 
 
             VCI_INIT_CONFIG config = new VCI_INIT_CONFIG();
- //           UInt32 can_id = Consts.MASTER_CAN_ID;   //滤波
-//            can_id <<= 21;
+            //           UInt32 can_id = Consts.MASTER_CAN_ID;   //滤波
+            //            can_id <<= 21;
 
 
-            config.AccCode = System.Convert.ToUInt32("0x80000000", 16);//can_id;// System.Convert.ToUInt32("0x80000000", 16);
-            config.AccMask = System.Convert.ToUInt32("0xFFFFFFFF", 16);//0x1fffffff;//过滤前3BIT  0x1f000000
+            config.AccCode = 0xC7FA8028; //System.Convert.ToUInt32("0x18FF5005", 16);//can_id;// System.Convert.ToUInt32("0x80000000", 16);
+            config.AccMask = 0x00000007; //System.Convert.ToUInt32("0x00000000", 16);//0x1fffffff;//过滤前3BIT  0x1f000000
 
             config.Timing0 = System.Convert.ToByte(Kbps((int)m_timing, 0), 16);
             config.Timing1 = System.Convert.ToByte(Kbps((int)m_timing, 1), 16);
 
-            config.Filter = (Byte)(1);//接收方式 1:接收全部类型 2:只接收标准帧 3:只接收扩展帧
+            config.Filter = (Byte)(3);//接收方式 1:接收全部类型 2:只接收标准帧 3:只接收扩展帧
 
             config.Mode = (Byte)0;//模式 0 正常 1只听 2 自测
 
@@ -135,14 +135,14 @@ namespace KS5045上位机
             if (Open())
             {
                 VCI_INIT_CONFIG config = new VCI_INIT_CONFIG();
-                UInt32 can_id = Consts.CAN_ID;   //滤波
-                can_id <<= 21;
-                config.AccCode = System.Convert.ToUInt32("0x80000000", 16);//can_id;// System.Convert.ToUInt32("0x80000000", 16);
-                config.AccMask = System.Convert.ToUInt32("0xFFFFFFFF", 16);//0x1fffffff;//过滤前3BIT  0x1f000000
+ //               UInt32 can_id = Consts.CAN_ID;   //滤波
+ //               can_id <<= 21;
+                config.AccCode = 0xC7FA8028;//System.Convert.ToUInt32("0x80000000", 16);//can_id;// System.Convert.ToUInt32("0x80000000", 16);
+                config.AccMask = 0x00000007;//System.Convert.ToUInt32("0xFFFFFFFF", 16);//0x1fffffff;//过滤前3BIT  0x1f000000
 
                 config.Timing0 = System.Convert.ToByte(Kbps((int)m_timing, 0), 16);
                 config.Timing1 = System.Convert.ToByte(Kbps((int)m_timing, 1), 16);
-                config.Filter = (Byte)(1);//接收方式 1:接收全部类型 2:只接收标准帧 3:只接收扩展帧
+                config.Filter = (Byte)(3);//接收方式 1:接收全部类型 2:只接收标准帧 3:只接收扩展帧
 
                 config.Mode = (Byte)0;//模式 0 正常 1只听 2 自测
 

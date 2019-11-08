@@ -407,7 +407,7 @@ namespace KS5045上位机
 
                                 //以下增加CRC  fenglong 20191025
 
-                                if ((Can_Rev_Buf[0] == 0xAD) && (Can_Rev_Buf[1] == 0xDE))       //判断帧头是否正确
+                                if ((Can_Rev_Buf[0] == 0xAD) && (Can_Rev_Buf[1] == 0xDE) && (Can_Rev_Buf[2] == 0xC0) )       //判断帧头是否正确
                                 {
                                     RecCrcData = CRC(Can_Rev_Buf, 6);
                                     if ( (RecCrcData[0]== Can_Rev_Buf[6]) && (RecCrcData[1] == Can_Rev_Buf[7]) )     //判断校验是否正确
