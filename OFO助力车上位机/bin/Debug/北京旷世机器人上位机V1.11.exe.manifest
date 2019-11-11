@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="北京旷世机器人上位机V1.10.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="北京旷世机器人上位机V1.11.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="北京旷世机器人上位机V1.10" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
-    <commandLine file="北京旷世机器人上位机V1.10.exe" parameters="" />
+    <assemblyIdentity name="北京旷世机器人上位机V1.11" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="北京旷世机器人上位机V1.11.exe" parameters="" />
   </entryPoint>
   <trustInfo>
     <security>
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="北京旷世机器人上位机V1.10.exe" size="136144">
-      <assemblyIdentity name="北京旷世机器人上位机V1.10" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="北京旷世机器人上位机V1.11.exe" size="136656">
+      <assemblyIdentity name="北京旷世机器人上位机V1.11" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LvxT55I9RN456rN3ji4fFAZmo0Q=</dsig:DigestValue>
+        <dsig:DigestValue>T2S5J8FIV6MctOQShMWh4S7+C3Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

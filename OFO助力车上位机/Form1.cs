@@ -1584,7 +1584,14 @@ namespace KS5045上位机
                             SendCrcData = CRC(tx_buffer, 6);
                             tx_buffer[6] = SendCrcData[0];
                             tx_buffer[7] = SendCrcData[1];
-                            loadercan.StandardWrite(tx_buffer, cmd, len, type);
+
+                            if (loadercan.StandardWrite(tx_buffer, cmd, len, type)==-1)
+                            {
+                                CanSending = false;
+                                CommStatus.Text = "通信超时！请检查并重启！";
+                                CommStatus.ForeColor = Color.Red;
+                            }
+                            //loadercan.StandardWrite(tx_buffer, cmd, len, type);
 
                             //if (timer5.Enabled == false)
                             //{
@@ -1600,7 +1607,14 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
+                        //                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
                         //if (timer5.Enabled == false)
                         //{
                         //    timer5.Enabled = true;
@@ -1627,7 +1641,12 @@ namespace KS5045上位机
                             //SendCrcData = CRC(tx_buffer, 6);
                             //tx_buffer[6] = SendCrcData[0];
                             //tx_buffer[7] = SendCrcData[1];
-                            loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                            if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                            {
+                                CanSending = false;
+                                CommStatus.Text = "通信超时！请检查并重启！";
+                                CommStatus.ForeColor = Color.Red;
+                            }
                             //if (timer5.Enabled == false)
                             //{
                             //    timer5.Enabled = true;
@@ -1662,7 +1681,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         //if (timer5.Enabled == false)
                         //{
                         //    timer5.Enabled = true;
@@ -1678,7 +1702,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         //if (timer5.Enabled == false)
                         //{
                         //    timer5.Enabled = true;
@@ -1693,7 +1722,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         //if (timer5.Enabled == false)
                         //{
                         //    timer5.Enabled = true;
@@ -1708,7 +1742,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         //if (timer5.Enabled == false)
                         //{
                         //    timer5.Enabled = true;
@@ -1730,7 +1769,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         button1.ForeColor = Color.Black;
                         //if (timer5.Enabled == false)
                         //{
@@ -1754,7 +1798,12 @@ namespace KS5045上位机
                         SendCrcData = CRC(tx_buffer, 6);
                         tx_buffer[6] = SendCrcData[0];
                         tx_buffer[7] = SendCrcData[1];
-                        loadercan.StandardWrite(tx_buffer, cmd, len, type);
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
                         button2.ForeColor = Color.Black;
                         //if (timer5.Enabled == false)
                         //{
@@ -2266,15 +2315,19 @@ namespace KS5045上位机
             if (overtime > 3)//超时
             {
  //               overtime = 0;
-                CommStatus.Text = "通信超时！";
+                CommStatus.Text = "通信超时！请确认后重启！";
                 CommStatus.ForeColor = Color.Red;
             }
-            else
+            else if(CanSending == true)
             {
                 CommStatus.Text = " CAN2.0：BPS：250Kbps";
                 CommStatus.ForeColor = Color.Blue;
             }
 
+            if (CanSending == false)
+            {
+                timer5.Enabled = false;
+            }
         }
 
         /// <summary>
