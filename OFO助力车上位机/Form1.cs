@@ -466,32 +466,33 @@ namespace KS5045上位机
 
             switch(cmd)
             {
-                case 0x9F:
+                //                                                  应陈炜要求，改为0x21  fenglong 20191118
+                //case 0x9F:
 
-                    tmp_data = Can_Rev_Buf[4];
-                    tmp_data <<= 8;
-                    tmp_data += Can_Rev_Buf[3];
-                    this.BAT_SUPPLIER.Invoke(new EventHandler(delegate
-                    {
-                        if (tmp_data == 2)
-                        {
-                            BAT_SUPPLIER.Text = "SCUD";
-                        }
-                        else
-                        {
-                            BAT_SUPPLIER.Text = "XX";
-                        }
+                //    tmp_data = Can_Rev_Buf[4];
+                //    tmp_data <<= 8;
+                //    tmp_data += Can_Rev_Buf[3];
+                //    this.BAT_SUPPLIER.Invoke(new EventHandler(delegate
+                //    {
+                //        if (tmp_data == 2)
+                //        {
+                //            BAT_SUPPLIER.Text = "SCUD";
+                //        }
+                //        else
+                //        {
+                //            BAT_SUPPLIER.Text = "XX";
+                //        }
 
 
-                        //data_tmp = tmp_data;
-                        //data_tmp = data_tmp * (float)1;//精度0.5
-                        //data_tmp -= 40;
-                        //temp_6.Text = data_tmp.ToString("F");
-                    }));
+                //        //data_tmp = tmp_data;
+                //        //data_tmp = data_tmp * (float)1;//精度0.5
+                //        //data_tmp -= 40;
+                //        //temp_6.Text = data_tmp.ToString("F");
+                //    }));
 
-                    disp.set_value(cmd, tmp_data.ToString());
+                //    disp.set_value(cmd, tmp_data.ToString());
 
-                    break;
+                //    break;
 
 
                 case 0xA0:
@@ -1188,7 +1189,31 @@ namespace KS5045上位机
 
                     break;
 
-               
+
+                case 0x21:                          //应陈炜要求，将9F改为21，，，，fenglong 20191118
+
+                    tmp_data = Can_Rev_Buf[5];
+                    tmp_data <<= 8;
+                    tmp_data += Can_Rev_Buf[4];
+                    this.BAT_SUPPLIER.Invoke(new EventHandler(delegate
+                    {
+                        if (tmp_data == 2)
+                        {
+                            BAT_SUPPLIER.Text = "SCUD";
+                        }
+                        else
+                        {
+                            BAT_SUPPLIER.Text = "XX";
+                        }
+                    }));
+
+                    disp.set_value(cmd, tmp_data.ToString());
+
+                    break;
+
+
+
+
 
                 case 0x50:
 
@@ -1634,7 +1659,8 @@ namespace KS5045上位机
                         tx_buffer[7] = 0x00;
 
 
-                        for (byte i = 0x9F; i <= 0xA2; i++)
+                        //                       for (byte i = 0x9F; i <= 0xA2; i++)
+                        for (byte i = 0xA0; i <= 0xA2; i++)         //应陈炜要求，将9F改为21  凤龙20191118
                         {
                             tx_buffer[2] = i;
                             //tx_buffer[5] = 0;
@@ -1695,7 +1721,8 @@ namespace KS5045上位机
                     }
 
 
-                    for (byte i = 0x11; i <= 0x20; i++)
+                    //                   for (byte i = 0x11; i <= 0x20; i++)
+                    for (byte i = 0x11; i <= 0x21; i++)         //应陈炜要求，将9F改为21  凤龙20191118
                     {
                         tx_buffer[3] = i;
                         //tx_buffer[5] = 0;

@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>北京旷世机器人上位机</RootNamespace>
-    <AssemblyName>北京旷世机器人上位机V1.11</AssemblyName>
+    <AssemblyName>北京旷世机器人上位机V1.2</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
