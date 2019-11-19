@@ -193,21 +193,21 @@ namespace KS5045上位机
 
             SoftFlagLabelArr[0] = SoftOv;
             SoftFlagLabelArr[1] = SoftUv;
-            SoftFlagLabelArr[2] = SoftOt;
-            SoftFlagLabelArr[3] = SoftUt;
+            SoftFlagLabelArr[2] = SoftOt_CHG;
+            SoftFlagLabelArr[3] = SoftOt;//SoftUt;
             SoftFlagLabelArr[4] = SoftOcc;
             SoftFlagLabelArr[5] = softOcd;
             SoftFlagLabelArr[6] = SoftUSoc;
             SoftFlagLabelArr[7] = SoftVima;
             SoftFlagLabelArr[8] = SoftImT;
             SoftFlagLabelArr[9] = SoftROc;
-            SoftFlagLabelArr[10] = SoftOt_CHG;
-            SoftFlagLabelArr[11] = SoftUt_CHG;
+            //SoftFlagLabelArr[10] = SoftOt_CHG;
+            //SoftFlagLabelArr[11] = SoftUt_CHG;
 
             BqFlagLabelArr[0] = BqOv;
             BqFlagLabelArr[1] = BqUv;
-            BqFlagLabelArr[2] = BqOt;
-            BqFlagLabelArr[3] = BqUt;
+            BqFlagLabelArr[2] = BqOt_CHG;
+            BqFlagLabelArr[3] = BqOt;
             BqFlagLabelArr[4] = BqOcc;
             BqFlagLabelArr[5] = BqOcd;
             BqFlagLabelArr[6] = BqUSoc;
@@ -217,14 +217,14 @@ namespace KS5045上位机
             BqFlagLabelArr[10] = BqErr;
             BqFlagLabelArr[11] = BqSUv;
             BqFlagLabelArr[12] = BqScd;
-            BqFlagLabelArr[13] = BqOt_CHG;
-            BqFlagLabelArr[14] = BqUt_CHG;
-            BqFlagLabelArr[15] = BqOt_MOS;
+            BqFlagLabelArr[13] = BqUt_CHG;
+            BqFlagLabelArr[14] = BqUt;
+  //          BqFlagLabelArr[15] = BqOt_MOS;
 
             RecFlagLabelArr[0] = RecOv;
             RecFlagLabelArr[1] = RecUv;
-            RecFlagLabelArr[2] = RecOt;
-            RecFlagLabelArr[3] = RecUt;
+            RecFlagLabelArr[2] = RecOt_CHG;// ;
+            RecFlagLabelArr[3] = RecOt;// ;
             RecFlagLabelArr[4] = RecOcc;
             RecFlagLabelArr[5] = RecOcd;
             RecFlagLabelArr[6] = RecUSoc;
@@ -234,8 +234,8 @@ namespace KS5045上位机
             RecFlagLabelArr[10] = RecErr;
             RecFlagLabelArr[11] = RecSUv;
             RecFlagLabelArr[12] = RecScd;
-            RecFlagLabelArr[13] = RecOt_CHG;
-            RecFlagLabelArr[14] = RecUt_CHG;
+            RecFlagLabelArr[13] = RecUt_CHG;
+            RecFlagLabelArr[14] = RecUt;
 
 
             ChgFlagLabelArr[0] = SysCharging;
@@ -266,12 +266,12 @@ namespace KS5045上位机
 
             }
 
-            for (int i = 0; i < 12; i++)
+            for (int i = 0; i < 10; i++)
             {
                 SoftFlagLabelArr[i].Enabled = false;
             }
 
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 15; i++)
             {
                 BqFlagLabelArr[i].Enabled = false;
             }
@@ -1096,7 +1096,7 @@ namespace KS5045上位机
                     tmp_data <<= 8;
                     tmp_data += Can_Rev_Buf[4];
 
-                    for (int i = 0; i < 12; i++)
+                    for (int i = 0; i < 10; i++)
                     {
                         j = tmp_data;
                         if (((j >> i) &0x01) == 1)//根据返回值决定亮还是不亮
@@ -1128,7 +1128,7 @@ namespace KS5045上位机
                     tmp_data <<= 8;
                     tmp_data += Can_Rev_Buf[4];
 
-                    for (int i = 0; i < 16; i++)
+                    for (int i = 0; i < 15; i++)
                     {
                         j = tmp_data;
                         if (((j >> i) & 0x01) == 1)//根据返回值决定亮还是不亮
@@ -2387,6 +2387,8 @@ namespace KS5045上位机
                 timer5.Enabled = false;
             }
         }
+
+
 
         /// <summary>
         /// CRC数据验证

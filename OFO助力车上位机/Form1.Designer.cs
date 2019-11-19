@@ -99,10 +99,8 @@
             this.SysNoCharging = new System.Windows.Forms.Label();
             this.SecondWarning = new System.Windows.Forms.TableLayoutPanel();
             this.BqScd = new System.Windows.Forms.Label();
-            this.BqUt = new System.Windows.Forms.Label();
             this.BqOv = new System.Windows.Forms.Label();
             this.BqUv = new System.Windows.Forms.Label();
-            this.BqOt = new System.Windows.Forms.Label();
             this.BqOcc = new System.Windows.Forms.Label();
             this.BqOcd = new System.Windows.Forms.Label();
             this.BqUSoc = new System.Windows.Forms.Label();
@@ -111,9 +109,9 @@
             this.BqErr = new System.Windows.Forms.Label();
             this.BqVima = new System.Windows.Forms.Label();
             this.BqSUv = new System.Windows.Forms.Label();
+            this.BqOt = new System.Windows.Forms.Label();
             this.BqOt_CHG = new System.Windows.Forms.Label();
             this.BqUt_CHG = new System.Windows.Forms.Label();
-            this.BqOt_MOS = new System.Windows.Forms.Label();
             this.SecondStorage = new System.Windows.Forms.TableLayoutPanel();
             this.RecOv = new System.Windows.Forms.Label();
             this.RecUv = new System.Windows.Forms.Label();
@@ -131,18 +129,16 @@
             this.RecUt = new System.Windows.Forms.Label();
             this.RecSUv = new System.Windows.Forms.Label();
             this.SoftWarning = new System.Windows.Forms.TableLayoutPanel();
-            this.SoftUt = new System.Windows.Forms.Label();
             this.SoftOv = new System.Windows.Forms.Label();
             this.SoftUv = new System.Windows.Forms.Label();
-            this.SoftOt = new System.Windows.Forms.Label();
             this.SoftOcc = new System.Windows.Forms.Label();
             this.softOcd = new System.Windows.Forms.Label();
             this.SoftUSoc = new System.Windows.Forms.Label();
             this.SoftVima = new System.Windows.Forms.Label();
             this.SoftImT = new System.Windows.Forms.Label();
             this.SoftROc = new System.Windows.Forms.Label();
+            this.SoftOt = new System.Windows.Forms.Label();
             this.SoftOt_CHG = new System.Windows.Forms.Label();
-            this.SoftUt_CHG = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.CHG_temp_mosfet = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -355,6 +351,7 @@
             this.label196 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.BqUt = new System.Windows.Forms.Label();
             this.msMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1190,10 +1187,8 @@
             this.SecondWarning.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.SecondWarning.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.SecondWarning.Controls.Add(this.BqScd, 3, 0);
-            this.SecondWarning.Controls.Add(this.BqUt, 0, 3);
             this.SecondWarning.Controls.Add(this.BqOv, 0, 0);
             this.SecondWarning.Controls.Add(this.BqUv, 0, 1);
-            this.SecondWarning.Controls.Add(this.BqOt, 0, 2);
             this.SecondWarning.Controls.Add(this.BqOcc, 1, 0);
             this.SecondWarning.Controls.Add(this.BqOcd, 1, 1);
             this.SecondWarning.Controls.Add(this.BqUSoc, 1, 2);
@@ -1202,9 +1197,10 @@
             this.SecondWarning.Controls.Add(this.BqErr, 2, 2);
             this.SecondWarning.Controls.Add(this.BqVima, 1, 3);
             this.SecondWarning.Controls.Add(this.BqSUv, 2, 3);
-            this.SecondWarning.Controls.Add(this.BqOt_CHG, 3, 1);
-            this.SecondWarning.Controls.Add(this.BqUt_CHG, 3, 2);
-            this.SecondWarning.Controls.Add(this.BqOt_MOS, 3, 3);
+            this.SecondWarning.Controls.Add(this.BqOt, 0, 3);
+            this.SecondWarning.Controls.Add(this.BqOt_CHG, 0, 2);
+            this.SecondWarning.Controls.Add(this.BqUt_CHG, 3, 1);
+            this.SecondWarning.Controls.Add(this.BqUt, 3, 2);
             this.SecondWarning.Location = new System.Drawing.Point(34, 377);
             this.SecondWarning.Name = "SecondWarning";
             this.SecondWarning.RowCount = 4;
@@ -1227,19 +1223,6 @@
             this.BqScd.Size = new System.Drawing.Size(56, 17);
             this.BqScd.TabIndex = 182;
             this.BqScd.Text = "短路保护";
-            // 
-            // BqUt
-            // 
-            this.BqUt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BqUt.AutoSize = true;
-            this.BqUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BqUt.ForeColor = System.Drawing.Color.Red;
-            this.BqUt.Location = new System.Drawing.Point(18, 85);
-            this.BqUt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BqUt.Name = "BqUt";
-            this.BqUt.Size = new System.Drawing.Size(56, 17);
-            this.BqUt.TabIndex = 179;
-            this.BqUt.Text = "放电欠温";
             // 
             // BqOv
             // 
@@ -1266,19 +1249,6 @@
             this.BqUv.Size = new System.Drawing.Size(56, 17);
             this.BqUv.TabIndex = 169;
             this.BqUv.Text = "放电欠压";
-            // 
-            // BqOt
-            // 
-            this.BqOt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BqOt.AutoSize = true;
-            this.BqOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BqOt.ForeColor = System.Drawing.Color.Red;
-            this.BqOt.Location = new System.Drawing.Point(18, 58);
-            this.BqOt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BqOt.Name = "BqOt";
-            this.BqOt.Size = new System.Drawing.Size(56, 17);
-            this.BqOt.TabIndex = 170;
-            this.BqOt.Text = "放电过温";
             // 
             // BqOcc
             // 
@@ -1384,13 +1354,26 @@
             this.BqSUv.TabIndex = 181;
             this.BqSUv.Text = "放电欠压三级";
             // 
+            // BqOt
+            // 
+            this.BqOt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BqOt.AutoSize = true;
+            this.BqOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BqOt.ForeColor = System.Drawing.Color.Red;
+            this.BqOt.Location = new System.Drawing.Point(18, 85);
+            this.BqOt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BqOt.Name = "BqOt";
+            this.BqOt.Size = new System.Drawing.Size(56, 17);
+            this.BqOt.TabIndex = 170;
+            this.BqOt.Text = "放电过温";
+            // 
             // BqOt_CHG
             // 
             this.BqOt_CHG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BqOt_CHG.AutoSize = true;
             this.BqOt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BqOt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.BqOt_CHG.Location = new System.Drawing.Point(298, 32);
+            this.BqOt_CHG.Location = new System.Drawing.Point(18, 58);
             this.BqOt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BqOt_CHG.Name = "BqOt_CHG";
             this.BqOt_CHG.Size = new System.Drawing.Size(56, 17);
@@ -1403,25 +1386,12 @@
             this.BqUt_CHG.AutoSize = true;
             this.BqUt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BqUt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.BqUt_CHG.Location = new System.Drawing.Point(298, 58);
+            this.BqUt_CHG.Location = new System.Drawing.Point(298, 32);
             this.BqUt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BqUt_CHG.Name = "BqUt_CHG";
             this.BqUt_CHG.Size = new System.Drawing.Size(56, 17);
             this.BqUt_CHG.TabIndex = 179;
-            this.BqUt_CHG.Text = "充电欠温";
-            // 
-            // BqOt_MOS
-            // 
-            this.BqOt_MOS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BqOt_MOS.AutoSize = true;
-            this.BqOt_MOS.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BqOt_MOS.ForeColor = System.Drawing.Color.Red;
-            this.BqOt_MOS.Location = new System.Drawing.Point(296, 85);
-            this.BqOt_MOS.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BqOt_MOS.Name = "BqOt_MOS";
-            this.BqOt_MOS.Size = new System.Drawing.Size(61, 17);
-            this.BqOt_MOS.TabIndex = 179;
-            this.BqOt_MOS.Text = "MOS过温";
+            this.BqUt_CHG.Text = "充电低温";
             // 
             // SecondStorage
             // 
@@ -1435,17 +1405,17 @@
             this.SecondStorage.Controls.Add(this.RecUv, 0, 1);
             this.SecondStorage.Controls.Add(this.RecOcc, 1, 0);
             this.SecondStorage.Controls.Add(this.RecOcd, 1, 1);
-            this.SecondStorage.Controls.Add(this.RecOt, 0, 2);
             this.SecondStorage.Controls.Add(this.RecUSoc, 1, 2);
             this.SecondStorage.Controls.Add(this.RecImT, 2, 0);
             this.SecondStorage.Controls.Add(this.RecROc, 2, 1);
             this.SecondStorage.Controls.Add(this.RecErr, 2, 2);
             this.SecondStorage.Controls.Add(this.RecScd, 3, 0);
-            this.SecondStorage.Controls.Add(this.RecOt_CHG, 3, 1);
-            this.SecondStorage.Controls.Add(this.RecUt_CHG, 3, 2);
             this.SecondStorage.Controls.Add(this.RecVima, 1, 3);
-            this.SecondStorage.Controls.Add(this.RecUt, 0, 3);
             this.SecondStorage.Controls.Add(this.RecSUv, 2, 3);
+            this.SecondStorage.Controls.Add(this.RecOt, 0, 3);
+            this.SecondStorage.Controls.Add(this.RecOt_CHG, 0, 2);
+            this.SecondStorage.Controls.Add(this.RecUt_CHG, 3, 1);
+            this.SecondStorage.Controls.Add(this.RecUt, 3, 2);
             this.SecondStorage.Location = new System.Drawing.Point(431, 237);
             this.SecondStorage.Name = "SecondStorage";
             this.SecondStorage.RowCount = 4;
@@ -1515,7 +1485,7 @@
             this.RecOt.AutoSize = true;
             this.RecOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RecOt.ForeColor = System.Drawing.Color.Red;
-            this.RecOt.Location = new System.Drawing.Point(18, 58);
+            this.RecOt.Location = new System.Drawing.Point(18, 85);
             this.RecOt.Name = "RecOt";
             this.RecOt.Size = new System.Drawing.Size(56, 17);
             this.RecOt.TabIndex = 23;
@@ -1593,7 +1563,7 @@
             this.RecOt_CHG.AutoSize = true;
             this.RecOt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RecOt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.RecOt_CHG.Location = new System.Drawing.Point(298, 32);
+            this.RecOt_CHG.Location = new System.Drawing.Point(18, 58);
             this.RecOt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RecOt_CHG.Name = "RecOt_CHG";
             this.RecOt_CHG.Size = new System.Drawing.Size(56, 17);
@@ -1606,7 +1576,7 @@
             this.RecUt_CHG.AutoSize = true;
             this.RecUt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RecUt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.RecUt_CHG.Location = new System.Drawing.Point(298, 58);
+            this.RecUt_CHG.Location = new System.Drawing.Point(298, 32);
             this.RecUt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RecUt_CHG.Name = "RecUt_CHG";
             this.RecUt_CHG.Size = new System.Drawing.Size(56, 17);
@@ -1632,11 +1602,11 @@
             this.RecUt.AutoSize = true;
             this.RecUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.RecUt.ForeColor = System.Drawing.Color.Red;
-            this.RecUt.Location = new System.Drawing.Point(18, 85);
+            this.RecUt.Location = new System.Drawing.Point(298, 58);
             this.RecUt.Name = "RecUt";
             this.RecUt.Size = new System.Drawing.Size(56, 17);
             this.RecUt.TabIndex = 33;
-            this.RecUt.Text = "放电欠温";
+            this.RecUt.Text = "放电低温";
             this.RecUt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RecSUv
@@ -1660,18 +1630,16 @@
             this.SoftWarning.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.SoftWarning.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.SoftWarning.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.SoftWarning.Controls.Add(this.SoftUt, 0, 3);
             this.SoftWarning.Controls.Add(this.SoftOv, 0, 0);
             this.SoftWarning.Controls.Add(this.SoftUv, 0, 1);
-            this.SoftWarning.Controls.Add(this.SoftOt, 0, 2);
             this.SoftWarning.Controls.Add(this.SoftOcc, 1, 0);
             this.SoftWarning.Controls.Add(this.softOcd, 1, 1);
             this.SoftWarning.Controls.Add(this.SoftUSoc, 1, 2);
             this.SoftWarning.Controls.Add(this.SoftVima, 1, 3);
             this.SoftWarning.Controls.Add(this.SoftImT, 2, 0);
             this.SoftWarning.Controls.Add(this.SoftROc, 2, 1);
-            this.SoftWarning.Controls.Add(this.SoftOt_CHG, 2, 2);
-            this.SoftWarning.Controls.Add(this.SoftUt_CHG, 2, 3);
+            this.SoftWarning.Controls.Add(this.SoftOt, 0, 3);
+            this.SoftWarning.Controls.Add(this.SoftOt_CHG, 0, 2);
             this.SoftWarning.Location = new System.Drawing.Point(34, 237);
             this.SoftWarning.Name = "SoftWarning";
             this.SoftWarning.RowCount = 4;
@@ -1681,19 +1649,6 @@
             this.SoftWarning.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.SoftWarning.Size = new System.Drawing.Size(365, 110);
             this.SoftWarning.TabIndex = 129;
-            // 
-            // SoftUt
-            // 
-            this.SoftUt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SoftUt.AutoSize = true;
-            this.SoftUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SoftUt.ForeColor = System.Drawing.Color.Red;
-            this.SoftUt.Location = new System.Drawing.Point(18, 85);
-            this.SoftUt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SoftUt.Name = "SoftUt";
-            this.SoftUt.Size = new System.Drawing.Size(56, 17);
-            this.SoftUt.TabIndex = 179;
-            this.SoftUt.Text = "放电欠温";
             // 
             // SoftOv
             // 
@@ -1720,19 +1675,6 @@
             this.SoftUv.Size = new System.Drawing.Size(56, 17);
             this.SoftUv.TabIndex = 169;
             this.SoftUv.Text = "放电欠压";
-            // 
-            // SoftOt
-            // 
-            this.SoftOt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SoftOt.AutoSize = true;
-            this.SoftOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SoftOt.ForeColor = System.Drawing.Color.Red;
-            this.SoftOt.Location = new System.Drawing.Point(18, 58);
-            this.SoftOt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SoftOt.Name = "SoftOt";
-            this.SoftOt.Size = new System.Drawing.Size(56, 17);
-            this.SoftOt.TabIndex = 170;
-            this.SoftOt.Text = "放电过温";
             // 
             // SoftOcc
             // 
@@ -1812,31 +1754,31 @@
             this.SoftROc.TabIndex = 176;
             this.SoftROc.Text = "请求电流超限";
             // 
+            // SoftOt
+            // 
+            this.SoftOt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SoftOt.AutoSize = true;
+            this.SoftOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SoftOt.ForeColor = System.Drawing.Color.Red;
+            this.SoftOt.Location = new System.Drawing.Point(18, 85);
+            this.SoftOt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SoftOt.Name = "SoftOt";
+            this.SoftOt.Size = new System.Drawing.Size(56, 17);
+            this.SoftOt.TabIndex = 170;
+            this.SoftOt.Text = "放电过温";
+            // 
             // SoftOt_CHG
             // 
             this.SoftOt_CHG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SoftOt_CHG.AutoSize = true;
             this.SoftOt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.SoftOt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.SoftOt_CHG.Location = new System.Drawing.Point(207, 58);
+            this.SoftOt_CHG.Location = new System.Drawing.Point(18, 58);
             this.SoftOt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SoftOt_CHG.Name = "SoftOt_CHG";
             this.SoftOt_CHG.Size = new System.Drawing.Size(56, 17);
             this.SoftOt_CHG.TabIndex = 170;
             this.SoftOt_CHG.Text = "充电过温";
-            // 
-            // SoftUt_CHG
-            // 
-            this.SoftUt_CHG.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SoftUt_CHG.AutoSize = true;
-            this.SoftUt_CHG.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SoftUt_CHG.ForeColor = System.Drawing.Color.Red;
-            this.SoftUt_CHG.Location = new System.Drawing.Point(207, 85);
-            this.SoftUt_CHG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SoftUt_CHG.Name = "SoftUt_CHG";
-            this.SoftUt_CHG.Size = new System.Drawing.Size(56, 17);
-            this.SoftUt_CHG.TabIndex = 170;
-            this.SoftUt_CHG.Text = "充电低温";
             // 
             // tableLayoutPanel1
             // 
@@ -4403,6 +4345,19 @@
             // 
             this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
             // 
+            // BqUt
+            // 
+            this.BqUt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BqUt.AutoSize = true;
+            this.BqUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BqUt.ForeColor = System.Drawing.Color.Red;
+            this.BqUt.Location = new System.Drawing.Point(298, 58);
+            this.BqUt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BqUt.Name = "BqUt";
+            this.BqUt.Size = new System.Drawing.Size(56, 17);
+            this.BqUt.TabIndex = 179;
+            this.BqUt.Text = "放电低温";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -4503,7 +4458,6 @@
         private System.Windows.Forms.Label SysNoCharging;
         private System.Windows.Forms.TableLayoutPanel SecondWarning;
         private System.Windows.Forms.Label BqScd;
-        private System.Windows.Forms.Label BqUt;
         private System.Windows.Forms.Label BqOv;
         private System.Windows.Forms.Label BqUv;
         private System.Windows.Forms.Label BqOt;
@@ -4530,7 +4484,6 @@
         private System.Windows.Forms.Label RecUt;
         private System.Windows.Forms.Label RecSUv;
         private System.Windows.Forms.TableLayoutPanel SoftWarning;
-        private System.Windows.Forms.Label SoftUt;
         private System.Windows.Forms.Label SoftOv;
         private System.Windows.Forms.Label SoftUv;
         private System.Windows.Forms.Label SoftOt;
@@ -4768,10 +4721,9 @@
         private System.Windows.Forms.Label RecOt_CHG;
         private System.Windows.Forms.Label RecUt_CHG;
         private System.Windows.Forms.Label SoftOt_CHG;
-        private System.Windows.Forms.Label SoftUt_CHG;
-        private System.Windows.Forms.Label BqOt_MOS;
   
         private System.Windows.Forms.Timer timer5;
+        private System.Windows.Forms.Label BqUt;
     }
 }
 
