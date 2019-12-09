@@ -88,7 +88,7 @@ namespace KS5045上位机
 
         bool com_failed = false;
 
-
+        bool Read_Only = false;
 
         //测试标准
         ////bool test_voltage = false;
@@ -338,10 +338,18 @@ namespace KS5045上位机
                 thread_can.IsBackground = true;
                 thread_can.Start();
 
-                CanSending = true;
-                Thread thread_cansend = new Thread(new ThreadStart(can_send));
-                thread_cansend.IsBackground = true;
-                thread_cansend.Start();
+
+
+                if(Read_Only==false)
+                {
+                    CanSending = true;
+                    Thread thread_cansend = new Thread(new ThreadStart(can_send));
+                    thread_cansend.IsBackground = true;
+                    thread_cansend.Start();
+                }
+
+
+
 
                 str_info = " CAN2.0：" + //cmPort.Text +
                  " BPS：250Kbps";
@@ -1722,7 +1730,7 @@ namespace KS5045上位机
 
 
                     //                   for (byte i = 0x11; i <= 0x20; i++)
-                    for (byte i = 0x11; i <= 0x21; i++)         //应陈炜要求，将9F改为21  凤龙20191118
+                    for (byte i = 0x11; i <= 0x13; i++)          //应陈炜要求，将0x13~0x16拆到电压查巡后面  凤龙  20191209
                     {
                         tx_buffer[3] = i;
                         //tx_buffer[5] = 0;
@@ -1741,6 +1749,30 @@ namespace KS5045上位机
                         //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
+                    //                   for (byte i = 0x11; i <= 0x20; i++)
+                    for (byte i = 0x17; i <= 0x21; i++)         //应陈炜要求，将0x13~0x16拆到电压查巡后面  凤龙  20191209
+                    {
+                        tx_buffer[3] = i;
+                        //tx_buffer[5] = 0;
+                        SendCrcData = CRC(tx_buffer, 6);
+                        tx_buffer[6] = SendCrcData[0];
+                        tx_buffer[7] = SendCrcData[1];
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
+                        Thread.Sleep(Consts.TX_DELAY);
+                    }
+
+
+
+
 
                     for (byte i = 0x50; i <= 0x5D; i++)
                     {
@@ -1761,6 +1793,30 @@ namespace KS5045上位机
                         //}
                         Thread.Sleep(Consts.TX_DELAY);
                     }
+
+                    //                   for (byte i = 0x11; i <= 0x20; i++)
+                    for (byte i = 0x14; i <= 0x16; i++)         //应陈炜要求，将0x13~0x16拆到电压查巡后面  凤龙  20191209
+                    {
+                        tx_buffer[3] = i;
+                        //tx_buffer[5] = 0;s
+                        SendCrcData = CRC(tx_buffer, 6);
+                        tx_buffer[6] = SendCrcData[0];
+                        tx_buffer[7] = SendCrcData[1];
+                        if (loadercan.StandardWrite(tx_buffer, cmd, len, type) == -1)
+                        {
+                            CanSending = false;
+                            CommStatus.Text = "通信超时！请检查并重启！";
+                            CommStatus.ForeColor = Color.Red;
+                        }
+                        //if (timer5.Enabled == false)
+                        //{
+                        //    timer5.Enabled = true;
+                        //}
+                        Thread.Sleep(Consts.TX_DELAY);
+                    }
+
+
+
 
                     for (byte i = 0x90; i <= 0x95; i++)
                     {
@@ -2388,7 +2444,20 @@ namespace KS5045上位机
             }
         }
 
+        //private void Rec_Data_Only_CheckedChanged(object sender, EventArgs e)
+        //{
 
+        //    if (Rec_Data_Only.Checked == true)
+        //    {
+        //        CanSending = false;
+        //    }
+        //    else
+        //    {
+        //        CanSending = true;
+        //    }
+
+            
+        //}
 
         /// <summary>
         /// CRC数据验证

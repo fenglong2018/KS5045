@@ -112,22 +112,23 @@
             this.BqOt = new System.Windows.Forms.Label();
             this.BqOt_CHG = new System.Windows.Forms.Label();
             this.BqUt_CHG = new System.Windows.Forms.Label();
+            this.BqUt = new System.Windows.Forms.Label();
             this.SecondStorage = new System.Windows.Forms.TableLayoutPanel();
             this.RecOv = new System.Windows.Forms.Label();
             this.RecUv = new System.Windows.Forms.Label();
             this.RecOcc = new System.Windows.Forms.Label();
             this.RecOcd = new System.Windows.Forms.Label();
-            this.RecOt = new System.Windows.Forms.Label();
             this.RecUSoc = new System.Windows.Forms.Label();
             this.RecImT = new System.Windows.Forms.Label();
             this.RecROc = new System.Windows.Forms.Label();
             this.RecErr = new System.Windows.Forms.Label();
             this.RecScd = new System.Windows.Forms.Label();
+            this.RecVima = new System.Windows.Forms.Label();
+            this.RecSUv = new System.Windows.Forms.Label();
+            this.RecOt = new System.Windows.Forms.Label();
             this.RecOt_CHG = new System.Windows.Forms.Label();
             this.RecUt_CHG = new System.Windows.Forms.Label();
-            this.RecVima = new System.Windows.Forms.Label();
             this.RecUt = new System.Windows.Forms.Label();
-            this.RecSUv = new System.Windows.Forms.Label();
             this.SoftWarning = new System.Windows.Forms.TableLayoutPanel();
             this.SoftOv = new System.Windows.Forms.Label();
             this.SoftUv = new System.Windows.Forms.Label();
@@ -351,7 +352,6 @@
             this.label196 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
-            this.BqUt = new System.Windows.Forms.Label();
             this.msMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1393,6 +1393,19 @@
             this.BqUt_CHG.TabIndex = 179;
             this.BqUt_CHG.Text = "充电低温";
             // 
+            // BqUt
+            // 
+            this.BqUt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BqUt.AutoSize = true;
+            this.BqUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BqUt.ForeColor = System.Drawing.Color.Red;
+            this.BqUt.Location = new System.Drawing.Point(298, 58);
+            this.BqUt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.BqUt.Name = "BqUt";
+            this.BqUt.Size = new System.Drawing.Size(56, 17);
+            this.BqUt.TabIndex = 179;
+            this.BqUt.Text = "放电低温";
+            // 
             // SecondStorage
             // 
             this.SecondStorage.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetDouble;
@@ -1479,19 +1492,6 @@
             this.RecOcd.Text = "放电过流";
             this.RecOcd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // RecOt
-            // 
-            this.RecOt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecOt.AutoSize = true;
-            this.RecOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.RecOt.ForeColor = System.Drawing.Color.Red;
-            this.RecOt.Location = new System.Drawing.Point(18, 85);
-            this.RecOt.Name = "RecOt";
-            this.RecOt.Size = new System.Drawing.Size(56, 17);
-            this.RecOt.TabIndex = 23;
-            this.RecOt.Text = "放电过温";
-            this.RecOt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RecUSoc
             // 
             this.RecUSoc.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1557,6 +1557,45 @@
             this.RecScd.Text = "短路保护";
             this.RecScd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // RecVima
+            // 
+            this.RecVima.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RecVima.AutoSize = true;
+            this.RecVima.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RecVima.ForeColor = System.Drawing.Color.Red;
+            this.RecVima.Location = new System.Drawing.Point(96, 85);
+            this.RecVima.Name = "RecVima";
+            this.RecVima.Size = new System.Drawing.Size(80, 17);
+            this.RecVima.TabIndex = 32;
+            this.RecVima.Text = "电芯压差超限";
+            this.RecVima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RecSUv
+            // 
+            this.RecSUv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RecSUv.AutoSize = true;
+            this.RecSUv.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RecSUv.ForeColor = System.Drawing.Color.Red;
+            this.RecSUv.Location = new System.Drawing.Point(195, 85);
+            this.RecSUv.Name = "RecSUv";
+            this.RecSUv.Size = new System.Drawing.Size(80, 17);
+            this.RecSUv.TabIndex = 34;
+            this.RecSUv.Text = "放电欠压三级";
+            this.RecSUv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RecOt
+            // 
+            this.RecOt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RecOt.AutoSize = true;
+            this.RecOt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.RecOt.ForeColor = System.Drawing.Color.Red;
+            this.RecOt.Location = new System.Drawing.Point(18, 85);
+            this.RecOt.Name = "RecOt";
+            this.RecOt.Size = new System.Drawing.Size(56, 17);
+            this.RecOt.TabIndex = 23;
+            this.RecOt.Text = "放电过温";
+            this.RecOt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RecOt_CHG
             // 
             this.RecOt_CHG.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1583,19 +1622,6 @@
             this.RecUt_CHG.TabIndex = 170;
             this.RecUt_CHG.Text = "充电低温";
             // 
-            // RecVima
-            // 
-            this.RecVima.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecVima.AutoSize = true;
-            this.RecVima.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.RecVima.ForeColor = System.Drawing.Color.Red;
-            this.RecVima.Location = new System.Drawing.Point(96, 85);
-            this.RecVima.Name = "RecVima";
-            this.RecVima.Size = new System.Drawing.Size(80, 17);
-            this.RecVima.TabIndex = 32;
-            this.RecVima.Text = "电芯压差超限";
-            this.RecVima.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RecUt
             // 
             this.RecUt.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1608,19 +1634,6 @@
             this.RecUt.TabIndex = 33;
             this.RecUt.Text = "放电低温";
             this.RecUt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // RecSUv
-            // 
-            this.RecSUv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RecSUv.AutoSize = true;
-            this.RecSUv.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.RecSUv.ForeColor = System.Drawing.Color.Red;
-            this.RecSUv.Location = new System.Drawing.Point(195, 85);
-            this.RecSUv.Name = "RecSUv";
-            this.RecSUv.Size = new System.Drawing.Size(80, 17);
-            this.RecSUv.TabIndex = 34;
-            this.RecSUv.Text = "放电欠压三级";
-            this.RecSUv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SoftWarning
             // 
@@ -4345,19 +4358,6 @@
             // 
             this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
             // 
-            // BqUt
-            // 
-            this.BqUt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BqUt.AutoSize = true;
-            this.BqUt.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BqUt.ForeColor = System.Drawing.Color.Red;
-            this.BqUt.Location = new System.Drawing.Point(298, 58);
-            this.BqUt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.BqUt.Name = "BqUt";
-            this.BqUt.Size = new System.Drawing.Size(56, 17);
-            this.BqUt.TabIndex = 179;
-            this.BqUt.Text = "放电低温";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -4372,7 +4372,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KS5045上位机V1.3";
+            this.Text = "KS5045上位机V1.31";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
