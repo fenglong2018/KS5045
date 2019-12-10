@@ -1537,6 +1537,23 @@ namespace KS5045上位机
 
                     break;
 
+                case 0x96:
+
+                    tmp_data = Can_Rev_Buf[5];
+                    tmp_data <<= 8;
+                    tmp_data += Can_Rev_Buf[4];
+                    this.temp_7.Invoke(new EventHandler(delegate
+                    {
+                        data_tmp = tmp_data;
+                        data_tmp = data_tmp * (float)1;//精度0.5
+                        data_tmp -= 40;
+                        temp_7.Text = data_tmp.ToString("F0");
+                    }));
+
+                    disp.set_value(cmd, tmp_data.ToString());
+
+                    break;
+
                 default:
 
                     break;
@@ -1818,7 +1835,7 @@ namespace KS5045上位机
 
 
 
-                    for (byte i = 0x90; i <= 0x95; i++)
+                    for (byte i = 0x90; i <= 0x96; i++)
                     {
                         tx_buffer[3] = i;
                         //tx_buffer[5] = 0;

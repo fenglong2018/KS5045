@@ -352,6 +352,8 @@
             this.label196 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timer5 = new System.Windows.Forms.Timer(this.components);
+            this.label12 = new System.Windows.Forms.Label();
+            this.temp_7 = new System.Windows.Forms.Label();
             this.msMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1871,6 +1873,8 @@
             this.tableLayoutPanel1.Controls.Add(this.temp_6, 5, 5);
             this.tableLayoutPanel1.Controls.Add(this.label3, 6, 6);
             this.tableLayoutPanel1.Controls.Add(this.DSC_temp_mosfet, 7, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 4, 6);
+            this.tableLayoutPanel1.Controls.Add(this.temp_7, 5, 6);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 24);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -4358,6 +4362,31 @@
             // 
             this.timer5.Tick += new System.EventHandler(this.Timer5_Tick);
             // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(385, 162);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(68, 17);
+            this.label12.TabIndex = 134;
+            this.label12.Text = "电芯温度_7";
+            // 
+            // temp_7
+            // 
+            this.temp_7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.temp_7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.temp_7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.temp_7.Location = new System.Drawing.Point(488, 160);
+            this.temp_7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.temp_7.Name = "temp_7";
+            this.temp_7.Size = new System.Drawing.Size(43, 21);
+            this.temp_7.TabIndex = 129;
+            this.temp_7.Text = "N";
+            this.temp_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -4372,7 +4401,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KS5045上位机V1.31";
+            this.Text = "KS5045上位机V1.4";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
@@ -4724,6 +4753,8 @@
   
         private System.Windows.Forms.Timer timer5;
         private System.Windows.Forms.Label BqUt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label temp_7;
     }
 }
 
