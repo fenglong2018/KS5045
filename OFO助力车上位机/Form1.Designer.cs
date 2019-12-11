@@ -4355,7 +4355,7 @@
             // 
             // timer4
             // 
-            this.timer4.Interval = 2000;
+            this.timer4.Interval = 1;
             this.timer4.Tick += new System.EventHandler(this.Timer4_Tick);
             // 
             // timer5
@@ -4401,7 +4401,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KS5045上位机V1.4";
+            this.Text = "KS5045上位机V1.41";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();

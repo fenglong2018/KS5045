@@ -1535,6 +1535,26 @@ namespace KS5045上位机
 
                     disp.set_value(cmd, tmp_data.ToString());
 
+
+
+                    if (SAVE_DATA.Checked == true)
+                    {
+                        name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" + ".xls";
+
+                        if (File.Exists(name))
+                        {
+
+                            Save();
+                        }
+                        else
+                        {
+                            CreatData();
+                            Save();
+                        }
+                    }
+
+
+
                     break;
 
                 case 0x96:
@@ -1551,6 +1571,9 @@ namespace KS5045上位机
                     }));
 
                     disp.set_value(cmd, tmp_data.ToString());
+
+
+
 
                     break;
 
@@ -2195,12 +2218,12 @@ namespace KS5045上位机
             if (SAVE_DATA.Checked == true)
             {
                 SAVE_DATA.ForeColor = Color.Green;
-                timer4.Enabled = true;
+          //      timer4.Enabled = true;                            //改成一轮存一次
             }
             else
             {
                 SAVE_DATA.ForeColor = Color.Black;
-                timer4.Enabled = false;
+                //      timer4.Enabled = false;                    //改成一轮存一次
             }
 
         }
@@ -2210,19 +2233,19 @@ namespace KS5045上位机
         string name;
         private void Timer4_Tick(object sender, EventArgs e)
         {
-            name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人"  + ".xls";
+            //name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" + ".xls";
 
-            if (File.Exists(name))
-            {
+            //if (File.Exists(name))
+            //{
 
-                Save();
-            }
-            else
-            {
-                CreatData();
-                Save();
-            }
-
+            //    Save();
+            //}
+            //else
+            //{
+            //    CreatData();
+            //    Save();
+            //}
+            timer4.Enabled = false;
         }
 
 
