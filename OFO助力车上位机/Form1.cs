@@ -1539,7 +1539,7 @@ namespace KS5045上位机
 
                     if (SAVE_DATA.Checked == true)
                     {
-                        name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" + ".xls";
+                        name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷视机器人" + ".xls";
 
                         if (File.Exists(name))
                         {
@@ -2233,7 +2233,7 @@ namespace KS5045上位机
         string name;
         private void Timer4_Tick(object sender, EventArgs e)
         {
-            //name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" + ".xls";
+            //name = DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷视机器人" + ".xls";
 
             //if (File.Exists(name))
             //{
@@ -2251,10 +2251,10 @@ namespace KS5045上位机
 
         public void CreatData()
         {
-            FileStream fs = new FileStream(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" +  ".xls", FileMode.Append, FileAccess.Write, FileShare.Write);
+            FileStream fs = new FileStream(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷视机器人" +  ".xls", FileMode.Append, FileAccess.Write, FileShare.Write);
             fs.Close();
             String NextLine = "";
-            StreamWriter sw = new StreamWriter(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" + ".xls", true, Encoding.GetEncoding("GB2312"));
+            StreamWriter sw = new StreamWriter(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷视机器人" + ".xls", true, Encoding.GetEncoding("GB2312"));
 
             NextLine = "保存时间" + '\t' + "电池总电压" + '\t' + "电池电流" + '\t' + "SOC" +'\t'+ "电池包容量" + '\t' + "充放电次数" + '\t' +
                        "CELL1" + '\t' + "CELL2" + '\t' + "CELL3"+ '\t' + "CELL4" + '\t' + "CELL5" + '\t' + "CELL6" + '\t' + "CELL7" + '\t' + 
@@ -2271,7 +2271,7 @@ namespace KS5045上位机
 
         public void Save()
         {
-            StreamWriter sw = new StreamWriter(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷世机器人" +  ".xls", true, Encoding.GetEncoding("GB2312"));
+            StreamWriter sw = new StreamWriter(DateTime.Now.ToString("yyyy") + DateTime.Now.ToString("MM") + DateTime.Now.ToString("dd") + "北京旷视机器人" +  ".xls", true, Encoding.GetEncoding("GB2312"));
             String NextLine = "";
 
             //NextLine = DateTime.Now.ToString("HH") + ":" + DateTime.Now.ToString("mm") + ":" + DateTime.Now.ToString("ss") + '\t'

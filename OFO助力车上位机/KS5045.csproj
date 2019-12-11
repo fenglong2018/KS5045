@@ -8,8 +8,8 @@
     <ProjectGuid>{49CF2EE2-DA33-4B7C-9FB6-AA49663B6985}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>北京旷世机器人上位机</RootNamespace>
-    <AssemblyName>北京旷世机器人上位机V1.41</AssemblyName>
+    <RootNamespace>北京旷视机器人上位机</RootNamespace>
+    <AssemblyName>北京旷视机器人上位机V1.41</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

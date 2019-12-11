@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace 北京旷世机器人上位机.Properties {
+namespace 北京旷视机器人上位机.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
